@@ -1,0 +1,6 @@
+*.tfstate*
+.terraform/
+*.tfstate.backup
+*.tfplan
+.env
+.terragrunt-cache

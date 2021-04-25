@@ -1,0 +1,110 @@
+core infra notes.txt
+====================
+
+tuning
+------
+https://kubedex.com/90-days-of-aws-eks-in-production/
+
+namespaces
+----------
+
+
+auto-scalers
+------------
+https://medium.com/magalix/kubernetes-autoscaling-101-cluster-autoscaler-horizontal-pod-autoscaler-and-vertical-pod-2a441d9ad231
+https://medium.com/magalix/kubernetes-autoscaling-101-cluster-autoscaler-horizontal-pod-autoscaler-and-vertical-pod-2a441d9ad231
+
+- cluster autoscaler
+    https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler
+    https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/aws
+    https://medium.com/@alejandro.millan.frias/cluster-autoscaler-in-amazon-eks-d9f787176519
+
+
+
+- vertical pod autoscaler
+    https://github.com/kubernetes/community/blob/master/contributors/design-proposals/autoscaling/vertical-pod-autoscaler.md
+
+
+
+- cluster horizontal pod autoscaler
+    https://kubedex.com/resource/k8s-prom-hpa/
+    - part of kubernetes API
+
+
+- cluster proportional autoscaler
+    https://github.com/kubernetes-incubator/cluster-proportional-autoscaler
+
+- cluster overprovisioner
+https://github.com/helm/charts/tree/master/stable/cluster-overprovisioner
+
+
+
+ingress controllers
+------------------
+https://medium.com/@dmaas/amazon-eks-ingress-guide-8ec2ec940a70
+
+- nginx ingress controller
+    https://github.com/kubernetes/ingress-nginx/
+
+- ALB ingress controller
+    https://github.com/kubernetes-sigs/aws-alb-ingress-controller
+    https://medium.com/@trondhindenes/using-traefik-as-a-kubernetes-ingress-controller-for-both-internal-and-external-traffic-c06e4177314
+
+- ELB ingress controller
+
+- k8s-spot-rescheduler
+    https://kubedex.com/resource/k8s-spot-rescheduler/
+    https://github.com/pusher/k8s-spot-rescheduler
+
+- k8s-spot-termination-handler
+    https://github.com/pusher/k8s-spot-termination-handler
+
+
+
+egress  controllers
+-------------------
+
+
+monitoring
+----------
+- prometheus
+- Jaeger
+- 
+
+
+application
+-----------
+- Traefik
+    https://medium.com/@trondhindenes/using-traefik-as-a-kubernetes-ingress-controller-for-both-internal-and-external-traffic-c06e4177314
+- consul
+- vault
+
+
+Operators
+---------
+
+- helm
+- Weave Flux
+
+
+security/network/dns
+--------
+- istio?
+- consul
+- vault
+- external DNS
+    https://github.com/kubernetes-incubator/external-dns
+- core DNS
+    https://coredns.io/
+
+
+- kube2iam
+    https://github.com/jtblin/kube2iam
+
+- kiam
+
+
+backup
+------
+- Ark
+    https://github.com/heptio/ark

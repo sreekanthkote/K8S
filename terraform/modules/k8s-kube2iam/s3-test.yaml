@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aws-cli
+  namespace: default
+  labels:
+    name: aws-cli
+  annotations:
+    iam.amazonaws.com/role: k8s-v3-hydra-sbx-test-s3
+spec:
+  containers:
+  - image: fstab/aws-cli
+    command:
+      - "/home/aws/aws/env/bin/aws"
+      - "s3"
+      - "ls"
+      - "s3-test-eu-west-1-rwrd-uk-6fec8a"
+    name: aws-cli

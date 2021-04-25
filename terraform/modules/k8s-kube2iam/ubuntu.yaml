@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: ubuntu
+  namespace: default
+  annotations:
+    iam.amazonaws.com/role: arn:aws:iam::717340076277:role/k8s-hydra-cis-sbx1-test-s3
+spec:
+  containers:
+    - name: ubuntu
+      image: ubuntu
+      command: ["/bin/bash", "-ec", "while :; do echo '.'; sleep 5 ; done"]
+  restartPolicy: Never
